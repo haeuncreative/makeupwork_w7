@@ -5,3 +5,24 @@ body {
     font-family: Roboto, sans-serif;
     font-size: medium;
 }
+
+.header {
+    background-color: red;
+    text-decoration: none;
+
+}
+
+
+.header-buttons {
+    float: right;
+    border-left: 2px solid white;
+
+}
+
+
+
+.header-logo {
+    float: left;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
