@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_26_075713) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_085101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "url"
+    t.text "content"
+    t.bigint "sub_id", null: false
+    t.bigint "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["sub_id"], name: "index_posts_on_sub_id"
+  end
+
+  create_table "subs", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description"
+    t.bigint "moderator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["moderator_id"], name: "index_subs_on_moderator_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false

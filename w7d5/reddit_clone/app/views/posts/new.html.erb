@@ -1,0 +1,10 @@
+<h1>Create a Post!</h1>
+<form action="<%= posts_url %>" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="post[title]" id="title" required>
+    <label for="url">URL</label>
+    <input type="text" name="post[url]" id="url">
+    <label for="content">Content</label>
+    <input type="text" name="post[content]" id="content" required>
+    <input type="submit" value="Create Post">
+</form>
