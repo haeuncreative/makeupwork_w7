@@ -30,3 +30,174 @@ Migrating to CreateUsers (20221126075713)
   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(688274183373989625)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-11-26 00:27:45 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/haeuncreative/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/haeuncreative/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 526)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2802)
+
+
+Started GET "/users/new" for ::1 at 2022-11-26 00:27:50 -0800
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 735)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting =>
+...e, presence: true, :uniqueness: true
+...                              ^:
+  app/models/user.rb:5:in `'
+  app/controllers/users_controller.rb:10:in `new'
+
+Started POST "/__better_errors/e3640221831bdbf7/variables" for ::1 at 2022-11-26 00:27:50 -0800
+Started POST "/__better_errors/e3640221831bdbf7/variables" for ::1 at 2022-11-26 00:28:07 -0800
+Started GET "/users/new" for ::1 at 2022-11-26 00:28:09 -0800
+Processing by UsersController#new as HTML
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 1577)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:35:in `user_params'
+  app/controllers/users_controller.rb:10:in `new'
+
+Started POST "/__better_errors/437825c8f4b4c700/variables" for ::1 at 2022-11-26 00:28:09 -0800
+Started GET "/users/new" for ::1 at 2022-11-26 00:28:48 -0800
+Processing by UsersController#new as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1480)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:35:in `user_params'
+  app/controllers/users_controller.rb:10:in `new'
+
+Started POST "/__better_errors/3727509bca514b8c/variables" for ::1 at 2022-11-26 00:28:48 -0800
+Started GET "/users/new" for ::1 at 2022-11-26 00:29:04 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 6718)
+Completed 200 OK in 46ms (Views: 28.1ms | ActiveRecord: 6.2ms | Allocations: 13044)
+
+
+Started GET "/users/new" for ::1 at 2022-11-26 00:30:00 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1727)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2464)
+
+
+Started GET "/users/new" for ::1 at 2022-11-26 00:30:12 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1710)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2442)
+
+
+Started GET "/users/new" for ::1 at 2022-11-26 00:30:18 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1704)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2434)
+
+
+Started GET "/sessions/new" for ::1 at 2022-11-26 00:30:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  
+Started GET "/session/new" for ::1 at 2022-11-26 00:30:58 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1728)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2526)
+
+
+Started GET "/users/new" for ::1 at 2022-11-26 00:38:43 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7533)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 6.7ms | Allocations: 13686)
+
+
+
+NameError - undefined local variable or method `logged_in' for #<ActionView::Base:0x00000000007738>
+Did you mean?  logger:
+  app/views/layouts/application.html.erb:13
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/81c4422a17aff892/variables" for ::1 at 2022-11-26 00:38:43 -0800
+Started GET "/users/new" for ::1 at 2022-11-26 00:39:24 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 6560)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 7273)
+
+
+
+NoMethodError - undefined method `logged_in?' for #<ActionView::Base:0x000000000078a0>
+Did you mean?  logger?:
+  app/views/layouts/application.html.erb:13
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/86978706d9a2b703/variables" for ::1 at 2022-11-26 00:39:24 -0800
+Started GET "/users/new" for ::1 at 2022-11-26 00:40:30 -0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 76)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4110)
+Completed 200 OK in 28ms (Views: 13.0ms | ActiveRecord: 7.1ms | Allocations: 7460)
+
+
+Started GET "/users/new?user%5Busername%5D=nattyk&user%5Bpassword%5D=[FILTERED]" for ::1 at 2022-11-26 00:40:38 -0800
+Processing by UsersController#new as HTML
+  Parameters: {"user"=>{"username"=>"nattyk", "password"=>"[FILTERED]"}}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 48)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2015)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 2276)
+
+
+Started GET "/session/new" for ::1 at 2022-11-26 00:41:28 -0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 198)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2681)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3483)
+
+
+Started GET "/users/new?user%5Busername%5D=nattyk&user%5Bpassword%5D=[FILTERED]" for ::1 at 2022-11-26 00:41:33 -0800
+Processing by UsersController#new as HTML
+  Parameters: {"user"=>{"username"=>"nattyk", "password"=>"[FILTERED]"}}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 190)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2358)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+

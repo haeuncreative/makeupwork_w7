@@ -14,7 +14,12 @@ class SessionsController < ApplicationController
             login(@user)
             redirect_to user_url(@user.id)
         else
-            render[:errors] = ["Invalid username or password"]
+            @user = User.new(
+                username: params[:user][:username],
+                password: params[:user][:password]
+            )
+            flash[:errors] = ["Invalid username or password"]
+            render :new
         end
     end
 

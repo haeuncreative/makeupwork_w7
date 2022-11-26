@@ -3,11 +3,12 @@ class UsersController < ApplicationController
     before_action :require_logged_in, only: [:show, :index, :destroy]
 
     def index #users_url
-        @user = User.new
+        @users = User.all
+        render :index
     end
 
     def new #new_user_url
-        @user = User.new(user_params)
+        @user = User.new
         render :new
     end
 
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
         if @user.save!
             redirect_to user_url(@user.id)
         else
-            render[:errors] = ["Invalid username or password"]
+            flash[:errors] = @user.errors.full_messages
             render :new
         end
     end
